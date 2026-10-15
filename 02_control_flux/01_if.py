@@ -140,29 +140,3 @@ if nombre:
 edat = 197
 missatge = "És major d'edat" if edat >= 18 else "És menor d'edat"
 print(missatge)
-
-###
-# EXERCICIS
-###
-
-# Exercici 1: Determinar el més gran de dos nombres
-# Demana a l'usuari que introdueixi dos nombres i mostra un missatge
-# que indiqui quin és més gran o si són iguals.
-
-
-# Exercici 2: Calculadora senzilla
-# Demana a l'usuari dos nombres i una operació (+, -, *, /).
-# Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
-
-# Exercici 3: Any de traspàs
-# Demana a l'usuari que introdueixi un any i determina si és de traspàs.
-# Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
-# però no per 400.
-
-# Exercici 4: Classificar edats
-# Demana a l'usuari que introdueixi una edat i classifica-la en:
-# - Nadó (0-2 anys)
-# - Infant (3-12 anys)
-# - Adolescent (13-17 anys)
-# - Adult (18-64 anys)
-# - Persona gran (65 anys o més)
