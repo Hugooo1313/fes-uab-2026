@@ -7,8 +7,10 @@ print("\nExercici 1: Imprimir missatges")
 print("Escriu un programa que imprimeixi el teu nom i la teva ciutat en línies separades.")
 
 ### Completa aquí
-
-print("--------------")
+nom = "Hugo"
+ciutat = "Barcelona"
+print(nom)
+print(ciutat)
 
 print("\nExercici 2: Mostra els tipus de dades de les variables següents:")
 print("Utilitza la comanda 'type()' per determinar el tipus de dades de cada variable.")
@@ -20,7 +22,11 @@ e = None
 
 ### Completa aquí
 
-print("--------------")
+print("El tipus de a és:", type(a))
+print("El tipus de b és:", type(b))
+print("El tipus de c és:", type(c))
+print("El tipus de d és:", type(d))
+print("El tipus de e és:", type(e))
 
 print("\nExercici 3: Conversió de tipus")
 print("Converteix la cadena \"12345\" a un enter i després a un float.")
