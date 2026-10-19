@@ -95,7 +95,6 @@ else:
     print("INCORRECTE")
 
 
-
 # Exercici 6: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
@@ -116,12 +115,32 @@ else:
 # Indica si el consum és dins del límit o si l'ha superat; en aquest últim cas,
 # calcula quants GB addicionals s'han consumit.
 
+consum = float(input("Introdueix el consum mensual de dades de GB: "))
+
+if consum <= 20:
+    print("Estas dins del límit")
+elif consum > 20:
+    extra_consum = consum - 20
+    print(f"S'ha superat el límit amb {extra_consum} GB extra")
+
 # Exercici 8: Diagnòstic d'una connexió de fibra
 # Demana si l'indicador LOS del terminal òptic està encès i si l'indicador
 # d'Internet del router està encès. Segons aquestes dues dades, indica si cal
 # revisar el cable de fibra, comprovar el servei del proveïdor o si la connexió
 # sembla funcionar correctament.
 
+estat_LOS = input("Està encès (s/n): ").strip().lower()
+internet = input("L'indicador de internet està encès? (s/n): ").strip().lower()
+if estat_LOS == 's':
+    print("cal revisar el cable de fibra")
+elif internet != 's':
+    print("Cal revisar el proveïdor")
+elif estat_LOS != 's' and internet == 's':
+    print("La connexió es correcta")
+else:
+    print("Error")
+
+    
 # Exercici 9: Bateria d'un sistema d'alimentació ininterrompuda (SAI)
 # Demana el percentatge de bateria disponible al SAI que alimenta un armari
 # de comunicacions. Indica si el nivell és crític (menys del 20 %), baix
