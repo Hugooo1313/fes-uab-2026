@@ -33,8 +33,18 @@ print("Converteix la cadena \"12345\" a un enter i després a un float.")
 print("Converteix el float 3.99 a un enter. Què passa?")
 
 ### Completa aquí
+cadena = "12345"
+nombre_enter = int(cadena)
+nombre_decimal = float(cadena)
+print("Nombre enter:", nombre_enter)
+print("Nombre decimal:", nombre_decimal)
 
+float_original = 3.99
+nombre_enter2 = int(float_original)
+print("Nombre original:", float_original)
+print("Conversió feta:", nombre_enter2)
 print("--------------")
+
 
 print("\nExercici 4: Variables")
 print("Crea variables per al teu nom, edat i alçada.")
@@ -45,8 +55,11 @@ print("Utilitza f-strings per imprimir una presentació.")
 #age = 40
 
 ### Completa aquí
+name = "Hugo"
+age = 19
+height = 1.79
 
-print("--------------")
+print(f"Hola! Em dic {name}, tinc {age} anys i faig {height} metres")
 
 print("\nExercici 5: Nombres")
 print("1. Crea una variable amb el nombre PI (sense assignar una variable)")
@@ -54,6 +67,7 @@ print("2. Arrodoneix el nombre amb round()")
 print("3. Fes la divisió entera entre el nombre resultant i el nombre 2")
 print("4. El resultat hauria de ser 1")
 
+pi = 
 print("--------------")
 
 print("\nExercici 6: Conversor de temperatura")
