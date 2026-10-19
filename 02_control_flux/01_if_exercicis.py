@@ -6,14 +6,50 @@
 # Demana a l'usuari que introdueixi dos nombres i mostra un missatge
 # que indiqui quin és més gran o si són iguals.
 
+num1 = float(input("Introdueix un nombre:"))
+num2 = float(input("Introdueix un altre nombre:"))
+
+if num1 > num2:
+    print(f"El {num1} és més gran que {num2}")
+elif num1 < num2:
+    print(f"El {num2} és més gran que {num1}")
+else:
+    print("Els dos nombres són iguals")
+
+
 # Exercici 2: Calculadora senzilla
 # Demana a l'usuari dos nombres i una operació (+, -, *, /).
 # Fes l'operació i mostra'n el resultat (gestiona la divisió per zero).
+
+num1 = float(input("Introdueix un nombre:"))
+num2 = float(input("Introdueix un altre nombre:"))
+operacio = input("Introdueix una operació: (+, -, *, /)")
+
+if operacio == '+':
+    print(num1+num2)
+elif operacio == '-':
+    print(num1-num2)
+elif operacio == '*':
+    print(num1*num2)
+elif operacio == '/':
+    print(num1/num2)
+else:
+    print("Incorrecte")
+
 
 # Exercici 3: Any de traspàs
 # Demana a l'usuari que introdueixi un any i determina si és de traspàs.
 # Un any és de traspàs si és divisible per 4, excepte si és divisible per 100
 # però no per 400.
+
+any = int(input("Introdueix un any:"))
+
+if ((any %4 == 0) and (any %100 != 0)) or (any %400 != 0):
+    print(f"Any {any} sí eés de traspàs")
+else:
+    print(f"Any {any} no es de traspàs")
+
+
 
 # Exercici 4: Classificar edats
 # Demana a l'usuari que introdueixi una edat i classifica-la en:
@@ -23,6 +59,21 @@
 # - Adult (18-64 anys)
 # - Persona gran (65 anys o més)
 
+edat = int(input("Introdueix una edat"))
+if 0 < edat <= 2:
+    print("Nadó")
+elif 3 < edat <= 12:
+    print("Infant")
+elif 13 < edat <= 17:
+    print("Adolescent")
+elif 18 < edat <= 64:
+    print("Adult")
+elif edat > 65: 
+    print("Persona Gran")
+else: 
+    print("INCORRECTE")
+
+
 # Exercici 5: Qualitat del senyal Wi-Fi
 # Demana el nivell de senyal rebut (RSSI) en dBm i classifica la cobertura:
 # - -50 dBm o superior: excel·lent
@@ -30,10 +81,35 @@
 # - Entre -75 dBm i menys de -67 dBm: feble
 # - Inferior a -75 dBm: molt feble
 
+rssi = float(input("Introdueix un nivell de senyal RSSI en dBm: "))
+
+if  rssi >= -50:
+    print("Excel·lent")
+elif rssi >= -67:
+    print("Bona")
+elif rssi >= -75:
+    print("Feble")
+elif rssi < -75:
+    print("molt feble")
+else: 
+    print("INCORRECTE")
+
+
+
 # Exercici 6: Nivell de recepció d'una connexió de fibra òptica
 # Demana la potència òptica rebuda en dBm. Per a aquest exercici, considera
 # acceptable un nivell entre -27 dBm i -8 dBm, ambdós inclosos.
 # Indica si el nivell és massa baix, acceptable o massa alt.
+
+potencia = int(input("Introdueix la potencia: "))
+if -27 <= potencia <= -8:
+    print("Aceptable")
+elif potencia < -27:
+    print("massa baix")
+elif potencia > -8:
+    print("masssa alt")
+else: 
+    print("INCORRECTE")
 
 # Exercici 7: Consum mensual de dades mòbils
 # Demana el consum de dades en GB d'una línia mòbil. El pla inclou 20 GB.
