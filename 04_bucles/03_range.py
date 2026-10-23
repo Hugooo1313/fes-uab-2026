@@ -3,9 +3,6 @@
 # Permet crear una seqüència de números. Pot ser útil per a for, però no només per a això
 ###
 
-import os
-os.system("cls")
-
 # print("\nrange():")
 
 # Genera una seqüència de números del 0 al 9
