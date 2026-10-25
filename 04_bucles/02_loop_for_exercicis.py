@@ -42,7 +42,12 @@ print(f"El numero màxim és {maxim}")
 # Crea una llista nova que contingui només les paraules amb més de 5 lletres
 # fent servir un bucle for i list comprehension.
 
-
+paraules = ["casa", "arbre", "sol", "elefant", "lluna"]
+paraules_llargues = []
+for paraula in paraules:
+    if len(paraula) >= 5:
+        paraules_llargues.append(paraula)
+print(paraules_llargues)
 
 
 # Exercici 5: Comptar paraules que comencen per una lletra
@@ -51,10 +56,31 @@ print(f"El numero màxim és {maxim}")
 # Demana a l'usuari que introdueixi una lletra.
 # Compta quantes paraules de la llista comencen per aquesta lletra (sense diferenciar majúscules/minúscules).
 
+paraules = ["casa", "arbre", "sol", "elefant", "lluna", "cotxe"]
+inicial = input("Introdueix una lletra: ")
+contador = 0
+for paraula in paraules:
+    if paraula.lower().startswith(inicial):
+        contador += 1
+    elif paraula.startswith(inicial):
+        contador += 1
+
+print(f"Hi ha {contador} paraules que comencen per {inicial}")
+
+
 # Exercici 6: Mesures de tensió d'un sensor
 # Durant una prova s'han registrat les tensions següents (en volts):
 # tensions = [4.8, 5.0, 5.1, 4.9, 5.2]
 # Fent servir un bucle for, calcula la tensió mitjana i imprimeix-la.
+
+tensions = [4.8, 5.0, 5.1, 4.9, 5.2]
+suma = 0
+for tensio in tensions:
+    suma = suma + tensio
+
+mitjana = suma / len(tensions)
+print(f"La mitjana és: {mitjana}")
+
 
 # Exercici 7: Corrent en resistències
 # En un circuit s'aplica una tensió de 12 V a aquestes resistències:
@@ -62,11 +88,28 @@ print(f"El numero màxim és {maxim}")
 # Fent servir la llei d'Ohm (I = V / R) i un bucle for, calcula i imprimeix
 # el corrent que circula per cada resistència, en ampers.
 
+resistencies = [100, 220, 470, 1000]
+for resistencia in resistencies:
+    intensitat = 12 / resistencia
+    print(f"Per la resistencia de {resistencia} ohms pasa un corrent de {intensitat:.2f} A quan el voltatje és 12 V")
+
+
 # Exercici 8: Mostres que superen el llindar de soroll
 # Un receptor ha mesurat aquests nivells de soroll (en dBm):
 # nivells_soroll = [-92, -85, -78, -95, -81, -88]
 # Compta, amb un bucle for, quantes mostres superen el llindar de -80 dBm
 # (és a dir, tenen un valor més gran que -80) i imprimeix el resultat.
+
+nivells_soroll = [-92, -85, -78, -95, -81, -88]
+contador = 0
+for soroll in nivells_soroll:
+    if soroll > -80:
+        print(f"El {soroll} és menor a -80")
+        contador += 1
+
+print(f"Hi ha {contador} sorolls que superen -80 dBm")
+
+
 
 # Exercici 9: Càlcul de la taxa d'error de bits
 # Compara els bits transmesos i rebuts:
@@ -75,8 +118,22 @@ print(f"El numero màxim és {maxim}")
 # Fent servir un bucle for i els índexs de les llistes, compta quants bits
 # són diferents. Calcula i imprimeix la taxa d'error (bits diferents / total de bits).
 
+bits_transmesos = [1, 0, 1, 1, 0, 0, 1, 0]
+bits_rebuts =     [1, 0, 0, 1, 0, 1, 1, 0]
+contador = 0
+i=0
+for i in range(len(bits_transmesos)):                                                   # el len dice hay 8 numeros. El range los ordena de 0 al 7.   range(len(8)) = 0, 1, 2, 3, 4, 5, 6, 7
+    if bits_transmesos[i] != bits_rebuts:
+        contador+=1
+
+tasa_error = contador / len(bits_transmesos)
+print(f"Hi ha {contador} bits diferents i la tasa d'error és de: {tasa_error}")
+
 # Exercici 10: Període d'un senyal
 # Donades les freqüències següents, en hertzs:
 # frequencies = [50, 100, 500, 1000]
 # Fent servir un bucle for, calcula el període de cada senyal amb la fórmula
 # T = 1 / f i imprimeix cada freqüència amb el seu període en segons.
+
+
+
