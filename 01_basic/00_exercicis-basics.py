@@ -43,7 +43,7 @@ float_original = 3.99
 nombre_enter2 = int(float_original)
 print("Nombre original:", float_original)
 print("Conversió feta:", nombre_enter2)
-print("--------------")
+
 
 
 print("\nExercici 4: Variables")
@@ -67,8 +67,8 @@ print("2. Arrodoneix el nombre amb round()")
 print("3. Fes la divisió entera entre el nombre resultant i el nombre 2")
 print("4. El resultat hauria de ser 1")
 
-pi = 
-print("--------------")
+resultat = int(round(3.1416)/2)
+print(resultat)
 
 print("\nExercici 6: Conversor de temperatura")
 print("Demana a l'usuari una temperatura en graus Celsius.")
@@ -76,8 +76,11 @@ print("Converteix aquest valor a Fahrenheit amb la fórmula: F = (C * 9/5) + 32"
 print("Mostra els dos valors amb un missatge clar.")
 
 ### Completa aquí
+celsius = float(input("Introdueix la temperatura en ºC: "))
+fahrenheit = ((celsius * 9/5)+32)
+print(celsius)
+print(fahrenheit)
 
-print("--------------")
 
 print("\nExercici 7: Calculadora de propina")
 print("Demana el total d'un compte i el percentatge de propina.")
@@ -85,8 +88,13 @@ print("Calcula quant és la propina i el total final que s'ha de pagar.")
 print("Mostra els resultats amb 2 decimals.")
 
 ### Completa aquí
+total = float(input("Total del compte:"))
+percentatge_propina = float(input("Percentatge propina:"))
+propina = percentatge_propina/100 * total
+total_final = total + propina
 
-print("--------------")
+print(f"Propina donada: {propina:.2f}€")
+print(f"Total a pagar: {total_final:.2f}€")
 
 print("\nExercici 8: Validador de contrasenya simple")
 print("Demana una contrasenya a l'usuari.")
@@ -94,3 +102,9 @@ print("Comprova si té almenys 8 caràcters.")
 print("Mostra 'Contrasenya vàlida' o 'Contrasenya no vàlida'.")
 
 ### Completa aquí
+
+contrasenya = int(input("Posa una contrasenya:"))
+if len(contrasenya) >= 8:
+    print("Contrasenya vàlida")
+else:
+    print("Contrasenya invàlida")
