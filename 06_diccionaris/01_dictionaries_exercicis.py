@@ -26,14 +26,23 @@ print(estudiant)
 # Exercici 3: Afegir i eliminar
 # Afegeix la clau "grau" a l'estudiant i elimina després la clau "edat" amb del.
 
-
+estudiant["grau"] = "TELECOS"
+del estudiant["edat"]
+print(estudiant)
 
 
 # Exercici 4: Comprovar claus
 # Comprova amb in si existeixen les claus "nom" i "email" i imprimeix el resultat.
 
+print("nom" in estudiant)
+print("email" in estudiant)
+
 # Exercici 5: Recórrer un diccionari
 # Recorre el diccionari amb un bucle for i items() i imprimeix cada parella com "clau: valor".
+
+for clau, valor in estudiant.items():
+    print(f"{clau}: {valor}")
+
 
 # Exercici 6: Comptar paraules
 # Donada la llista de paraules:
