@@ -6,11 +6,28 @@
 # Crea un diccionari anomenat estudiant amb les claus "nom", "edat" i "assignatures"
 # (aquesta última, una llista amb tres assignatures). Imprimeix-lo.
 
+estudiant = {
+    "nom": "Hugo",
+    "edat": 19,
+    "assignatures": ["FES", "Mates", "Física"]
+}
+print (estudiant)
+
+
 # Exercici 2: Accedir i modificar
 # Imprimeix la segona assignatura de l'estudiant i canvia'n l'edat a un valor nou.
 
+print(estudiant["assignatures"][1])
+estudiant["edat"] = 20
+
+print(estudiant)
+
+
 # Exercici 3: Afegir i eliminar
 # Afegeix la clau "grau" a l'estudiant i elimina després la clau "edat" amb del.
+
+
+
 
 # Exercici 4: Comprovar claus
 # Comprova amb in si existeixen les claus "nom" i "email" i imprimeix el resultat.
