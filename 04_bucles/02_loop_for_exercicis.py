@@ -123,7 +123,7 @@ bits_rebuts =     [1, 0, 0, 1, 0, 1, 1, 0]
 contador = 0
 i=0
 for i in range(len(bits_transmesos)):                                                   # el len dice hay 8 numeros. El range los ordena de 0 al 7.   range(len(8)) = 0, 1, 2, 3, 4, 5, 6, 7
-    if bits_transmesos[i] != bits_rebuts:
+    if bits_transmesos[i] != bits_rebuts[i]:
         contador+=1
 
 tasa_error = contador / len(bits_transmesos)
@@ -134,6 +134,7 @@ print(f"Hi ha {contador} bits diferents i la tasa d'error és de: {tasa_error}")
 # frequencies = [50, 100, 500, 1000]
 # Fent servir un bucle for, calcula el període de cada senyal amb la fórmula
 # T = 1 / f i imprimeix cada freqüència amb el seu període en segons.
-
-
-
+frequencies = [50, 100, 500, 1000]
+for frecuencia in frequencies:
+    periode = 1 / frecuencia
+    print(f"Frecuencia: {frecuencia}, periode: {periode}")
