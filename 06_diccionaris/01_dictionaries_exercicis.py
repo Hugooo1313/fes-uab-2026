@@ -48,3 +48,13 @@ for clau, valor in estudiant.items():
 # Donada la llista de paraules:
 # paraules = ["sol", "lluna", "sol", "estrella", "lluna", "sol"]
 # Crea un diccionari que indiqui quantes vegades apareix cada paraula.
+
+print("\nExercici 6:")
+paraules = ["sol", "lluna", "sol", "estrella", "lluna", "sol"]
+recompte = {}
+for paraula in paraules:
+  if paraula in recompte:
+    recompte[paraula] += 1
+  else:
+    recompte[paraula] = 1
+print(recompte) 
