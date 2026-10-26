@@ -63,17 +63,33 @@ taula_multiplicar(5, 15)
 # Crea una funció mostrar_perfil(**kwargs) que imprimeixi cada parella clau: valor.
 # Crida-la amb les dades d'un estudiant (nom, edat, grau).
 
-def 
+def mostrar_perfil(**kwargs):
+    for clau, valor in kwargs.items():
+        print(f"{clau}: {valor}")
 
+mostrar_perfil(nom="Hugo", edat=19, grau="telecos", es_ric="True")
 
 
 # Exercici 7: Reconvertir exercicis anteriors
 # Torna a l'exercici del factorial (while) i del màxim d'una llista (for)
 # i converteix-los en funcions que retornin el resultat.
 
+
 # Exercici 8: Comptar vocals
 # Crea una funció comptar_vocals(text) que rebi una cadena de text i retorni quantes vocals
 # (a, e, i, o, u) conté. Ha de funcionar tant amb majúscules com amb minúscules.
+
+def comptar_vocals(text):
+    vocals = 'aeiouàèìòùáéíóúïü'
+    comptador=0
+    for vocal in text.lower():
+        if vocal == vocals:
+            comptador+=1
+    return comptador
+
+
+
+
 
 # Exercici 9: Retorn múltiple (mínim i màxim)
 # Crea una funció minim_i_maxim(numeros) que rebi una llista de números i retorni tant el valor
